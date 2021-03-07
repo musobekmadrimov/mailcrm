@@ -2,7 +2,7 @@
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
       <div class="page-loader">
-        <div class="loader">Loading...</div>
+        <div class="loader">Yuklanyapti...</div>
       </div>
       <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
@@ -11,7 +11,7 @@
           </div>
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="index.php">HOME</a></li>
+              <li><a href="index.php">BOSH SAHIFA</a></li>
             </ul>
           </div>
         </div>
@@ -21,7 +21,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h1 class="module-title font-alt mb-0">Login-Register</h1>
+                <h1 class="module-title font-alt mb-0">Kirish - Ro'yhatdan o'tish</h1>
               </div>
             </div>
           </div>
@@ -30,7 +30,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-5 col-sm-offset-1 mb-sm-40">
-                <h4 class="font-alt">Login</h4>
+                <h4 class="font-alt">KIRISH</h4>
                 <hr class="divider-w mb-10">
                 <form class="form">
                   <div class="form-group">
@@ -40,12 +40,12 @@
                     <input class="form-control" id="password" type="password" name="password" placeholder="Password"/>
                   </div>
                   <div class="form-group">
-                    <button class="btn btn-round btn-b">Login</button>
+                    <button class="btn btn-round btn-b">KIRISH</button>
                   </div>
                 </form>
               </div>
               <div class="col-sm-5">
-                <h4 class="font-alt">Register</h4>
+                <h4 class="font-alt">Ro'yhatdan o'tish</h4>
                 <hr class="divider-w mb-10">
                 <form class="form">
                   <div class="form-group">
