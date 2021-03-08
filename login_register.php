@@ -1,4 +1,5 @@
-<?php include('layouts/main-layout.php') ?>
+<?php include('layouts/main-layout.php');?>
+<?php include('app/login_register.php');?>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
       <div class="page-loader">
@@ -32,16 +33,17 @@
               <div class="col-sm-5 col-sm-offset-1 mb-sm-40">
                 <h4 class="font-alt">KIRISH</h4>
                 <hr class="divider-w mb-10">
-                <form class="form">
+                <form class="form" action="" method="POST">
                   <div class="form-group">
-                    <input class="form-control" id="username" type="text" name="username" placeholder="Username"/>
+                    <input class="form-control" id="username" type="text" name="loginUsername" placeholder="Username"/>
                   </div>
                   <div class="form-group">
-                    <input class="form-control" id="password" type="password" name="password" placeholder="Password"/>
+                    <input class="form-control" id="password" type="password" name="loginPassword" placeholder="Password"/>
                   </div>
                   <div class="form-group">
-                    <button class="btn btn-round btn-b">KIRISH</button>
+                    <button class="btn btn-round btn-b" name="loginSubmit" type="submit">KIRISH</button>
                   </div>
+                  <?php echo @$wrongAnswer ?>
                 </form>
               </div>
               <div class="col-sm-5">
@@ -49,13 +51,22 @@
                 <hr class="divider-w mb-10">
                 <form class="form">
                   <div class="form-group">
+                    <input class="form-control" id="registerUsername" type="text" name="registerUsername" placeholder="Username"/>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" id="phone_number" type="text" name="phone_number" placeholder="Phone Number"/>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" id="city" type="text" name="city" placeholder="City"/>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" id="address" type="text" name="address" placeholder="Adress"/>
+                  </div>
+                  <div class="form-group">
                     <input class="form-control" id="E-mail" type="text" name="email" placeholder="Email"/>
                   </div>
                   <div class="form-group">
-                    <input class="form-control" id="username" type="text" name="username" placeholder="Username"/>
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" id="password" type="password" name="password" placeholder="Password"/>
+                    <input class="form-control" id="registerPassword" type="password" name="registerPassword" placeholder="Password"/>
                   </div>
                   <div class="form-group">
                     <input class="form-control" id="re-password" type="password" name="re-password" placeholder="Re-enter Password"/>
