@@ -1,5 +1,5 @@
-<hr class="divider-d">
-        <footer class="footer bg-dark">
+<!-- <hr class="divider-d"> -->
+        <footer class="footer bg-dark" style="width: 100vw;position: fixed; bottom: 0; left: 0;">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">

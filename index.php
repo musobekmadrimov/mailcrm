@@ -1,4 +1,6 @@
-<?php include('layouts/main-layout.php') ?>
+<?php include('layouts/main-layout.php');
+      include('app/checkOrder.php')
+?>
 <style>
   #small-dialog {
     background: white;
@@ -19,7 +21,7 @@
     border: 3px double #000 !important;
   }
 
-  #orderSubmitButton:hover{
+  #orderSubmitButton:hover {
     color: #fff !important;
   }
 
@@ -116,6 +118,7 @@
       </div>
       <div class="titan-caption">
         <div class="caption-content">
+          <?php print @$result ?>
           <div class="font-alt mb-30 titan-title-size-1">Assalamu Alaykum! &amp; Xush kelibsiz!</div>
           <div class="font-alt mb-40 titan-title-size-4">TITAN CRM TIZIMI!</div>
         </div>
@@ -123,10 +126,10 @@
 
       <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
       <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-        <form action="app/checkOrder.php" method="post">
+        <form action="check_order.php" method="post">
           <h1>Pochta ID sini kiriting:</h1>
           <input type="text" class="form-control mb-1" id="orderIdInput" required maxlength="14" name="orderIdInput">
-          <button type="submit" name="submit" class="btn btn-block bg-dark" id="orderSubmitButton">ПОТВЕРДИТЬ</button>
+          <button type="submit" name="orderSubmitButton" class="btn btn-block bg-dark" id="orderSubmitButton">ПОТВЕРДИТЬ</button>
         </form>
 
       </div>
