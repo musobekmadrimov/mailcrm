@@ -22,7 +22,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h1 class="module-title font-alt mb-0">ВХОД - РЕГИСТРАТСИЯ</h1>
+                <h1 class="module-title font-alt mb-0">ВХОД - РЕГИСТРАЦИЯ</h1>
               </div>
             </div>
           </div>
@@ -35,10 +35,10 @@
                 <hr class="divider-w mb-10">
                 <form class="form" action="" method="POST">
                   <div class="form-group">
-                    <input class="form-control" id="username" type="text" name="loginUsername" placeholder="Username"/>
+                    <input class="form-control" id="username" type="text" name="loginUsername" placeholder="Почта"/>
                   </div>
                   <div class="form-group">
-                    <input class="form-control" id="password" type="password" name="loginPassword" placeholder="Password"/>
+                    <input class="form-control" id="password" type="password" name="loginPassword" placeholder="Пароль"/>
                   </div>
                   <div class="form-group">
                     <button class="btn btn-round btn-b" name="loginSubmit" type="submit">ВХОД</button>
@@ -82,7 +82,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6">
-                <p class="copyright font-alt">&copy; 2021&nbsp;<a href="index.php">TitaN</a>, Все правы зашищены!<br> автор: Musobek Madrimov</p>
+                <p class="copyright font-alt">&copy; 2021&nbsp;<a href="index.php">TitaN</a>, Все права зашищены!<br> автор: Musobek Madrimov</p>
               </div>
               <div class="col-sm-6">
                 <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a>
