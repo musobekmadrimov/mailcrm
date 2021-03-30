@@ -1,4 +1,6 @@
-<?php include('layouts/main-layout.php') ?>
+<?php include('layouts/main-layout.php');
+      include('../app/newOrder.php')
+?>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap');
     *{
@@ -237,15 +239,15 @@
             <label>Адрес доставки</label>
         </div>
         <div class="user-box">
-            <input type="number" name="weight" required autocomplete="off">
+            <input type="number" name="weight" id="weight" required autocomplete="off" oninput="calculateTotalSum()">
             <label>Масса</label>
         </div>
         <div class="user-box">
-            <input type="number" name="quantity" required autocomplete="off">
+            <input type="number" name="quantity" id="quantity" required autocomplete="off" oninput="calculateTotalSum()">
             <label>Количество</label>
         </div>
         <div class="user-box">
-            <input type="number" name="total_price" required autocomplete="off" disabled>
+            <input type="number" name="total_price" id="total_price" required autocomplete="off" readonly>
             <label>Стоимость</label>
         </div>
         
@@ -257,6 +259,13 @@
             ПОДТВЕРДИТЬ
 </button>
     </form>
+    <?= @$answer?>
 </div>
+
+<script>
+    function calculateTotalSum(){
+        $('#total_price').val(($('#weight').val() * 10000) * $('#quantity').val());
+    }
+</script>
 
 <?php include('layouts/bottom.php') ?>
