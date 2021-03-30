@@ -63,7 +63,7 @@
                     <input class="form-control" id="address" type="text" name="address" placeholder="Адрес" required/>
                   </div>
                   <div class="form-group">
-                    <input class="form-control" id="E-mail" type="text" name="email" placeholder="Почта" required/>
+                    <input class="form-control" id="E-mail" type="email" name="email" placeholder="Почта" required/>
                   </div>
                   <div class="form-group">
                     <input class="form-control" id="registerPassword" type="password" name="registerPassword" placeholder="Пароль" required/>

@@ -13,7 +13,7 @@ if(isset($_POST['loginSubmit'])){
 
     foreach ($result as $value) {
         if($loginUsername == $value['email'] and $loginPassword == $value['password']){
-            header('Location: userInterfeys.php');
+            header('Location: client/index.php');
         } else {
             $wrongAnswer = '<div class="alert alert-danger" role="alert">
             <button class="close" type="button" data-dismiss="alert" aria-hidden="true">&times;</button><i class="fa fa-coffee"></i><strong>Xatolik!</strong> Login yoki parolni noto\'g\'ri kiritdinggiz!

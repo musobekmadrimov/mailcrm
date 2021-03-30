@@ -129,7 +129,7 @@
         <form action="check_order.php" method="post">
           <h1>Pochta ID sini kiriting:</h1>
           <input type="text" class="form-control mb-1" id="orderIdInput" required maxlength="14" name="orderIdInput">
-          <button type="submit" name="orderSubmitButton" class="btn btn-block bg-dark" id="orderSubmitButton">ПОТВЕРДИТЬ</button>
+          <button type="submit" name="orderSubmitButton" class="btn btn-block bg-dark" id="orderSubmitButton">ПОДТВЕРДИТЬ</button>
         </form>
 
       </div>
