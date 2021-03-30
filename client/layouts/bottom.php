@@ -207,6 +207,15 @@
             });
         });
     });
+
+    /// === script for adding and removing active class to/from navbar items === ///
+    $(document).ready(function() {
+        let url = window.location.href.split('/');
+        let page = url[url.length - 1];
+        $(".nav-item.active").removeClass('active');
+        $(`a[href = "${page}"]`).parents('.nav-item').addClass('active');
+    });
+    /// === END === ///
 </script>
 </body>
 
