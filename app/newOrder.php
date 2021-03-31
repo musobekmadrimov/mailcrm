@@ -1,7 +1,7 @@
 <?php 
 include('db.php');
 
-// ================ REGISTRATION ================= //
+// ================ NEW ORDER ================= //
 
 if(isset($_POST['newOrderButton'])){
     try{
@@ -17,7 +17,7 @@ if(isset($_POST['newOrderButton'])){
     $sql2 = $pdo->prepare("SELECT * FROM `orders`");
     $sql2->execute();
     $result = $sql2->fetchAll();
-    $lastId = ($result[count($result) - 1]['id'] * 12);
+    @$lastId = @($result[count($result)-1]['id'] * 12);
     $orderId = strtoupper(substr($senderName, 0, 2) . substr($recipientName, 0, 2) . substr($senderPhone, -4) . substr($recipientPhone, -4) . $lastId);
     
     $sql = "INSERT INTO `orders`(`order_id`, `sender_name`, `sender_phone`, `recipient_name`, `recipient_phone`, `from`, `to`, `weight`, `quantity`, `total_price`) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";

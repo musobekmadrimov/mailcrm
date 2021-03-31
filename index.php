@@ -119,8 +119,8 @@
       <div class="titan-caption">
         <div class="caption-content">
           <?php print @$result ?>
-          <div class="font-alt mb-30 titan-title-size-1">Assalamu Alaykum! &amp; Xush kelibsiz!</div>
-          <div class="font-alt mb-40 titan-title-size-4">TITAN CRM TIZIMI!</div>
+          <div class="font-alt mb-30 titan-title-size-1">ЗДРАВСТВУЙТЕ! &amp; ДОБРО ПОЖАЛОВАТЬ!</div>
+          <div class="font-alt mb-40 titan-title-size-4">СRM СИСТЕМА TITAN!</div>
         </div>
       </div>
 
@@ -128,7 +128,7 @@
       <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
         <form action="check_order.php" method="post">
           <h1>Pochta ID sini kiriting:</h1>
-          <input type="text" class="form-control mb-1" id="orderIdInput" required maxlength="14" name="orderIdInput">
+          <input type="text" class="form-control mb-1" id="orderIdInput" required maxlength="20" name="orderIdInput">
           <button type="submit" name="orderSubmitButton" class="btn btn-block bg-dark" id="orderSubmitButton">ПОДТВЕРДИТЬ</button>
         </form>
 
