@@ -64,7 +64,7 @@ include('layouts/navbar.php');
                 </div>
             <?php } else {
                 print($result); ?>
-                <img src="https://img.icons8.com/pastel-glyph/2x/page-not-found--v1.png" alt="Not Found Image" style="width: 350px; height: auto; margin: 0 auto;">
+                <img src="assets/images/status/not found.png" alt="Not Found Image" style="width: 350px; height: auto; margin: 0 auto;">
             <?php } ?>
         </div>
 </div>
