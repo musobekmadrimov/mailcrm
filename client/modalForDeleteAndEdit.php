@@ -1,3 +1,4 @@
+<?php include('../app/newOrder.php');?>
 <!-- Modal Edit-->
 <div class="modal fade" id="editModal<?= $order['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -29,12 +30,20 @@
                     </div>
                     <div class="form-group">
                         <label>Откуда</label>
-                        <input class="form-control text-dark" type="text" name="edit_from" required autocomplete="off" value="<?= $order['from'] ?>">
-
+                        <select name="edit_from" id="edit_from" required class="form-control text-dark">
+                            <?php foreach ($cities as $city) { ?>
+                                <option value="<?= @$city['name'] ?>" class="form-control text-dark" name="edit_from" ><?= @$city['name'] ?></option>
+                            <?php } ?>
+                        </select>
                     </div>
                     <div class="form-group">
-                        <label>Адрес доставки</label>
-                        <input class="form-control text-dark" type="text" name="edit_to" required autocomplete="off" value="<?= $order['to'] ?>">
+                        <label>Куда</label>
+                        <select name="edit_to" id="edit_to" required class="form-control text-dark">
+                            <?php foreach ($cities as $city) { ?>
+                                <option value="<?= @$city['name'] ?>" class="form-control text-dark" name="edit_from" <?php (@$city['name'] == $order['to']) ? "selected" : "" ?>><?= @$city['name'] ?></option>
+                            <?php } ?>
+                        </select>
+                        <!-- <input class="form-control text-dark" type="text" name="edit_to" required autocomplete="off" value="<?= $order['to'] ?>"> -->
                     </div>
                     <div class="form-group">
                         <label>Масса</label>
@@ -66,7 +75,7 @@
                     <div class="modal-footer">
                         <button type="submit" name="edit-submit" class="btn btn-primary">O'zgartirish</button>
                     </div>
-                    
+
                 </form>
             </div>
         </div>

@@ -32,7 +32,7 @@
 
 <body class="dark-edition">
     <div class="wrapper ">
-        <div class="sidebar" data-color="purple" data-background-color="black" data-image="./assets/img/sidebar-2.jpg">
+        <div class="sidebar" data-color="azure" data-background-color="black" data-image="./assets/img/sidebar-2.jpg">
             <!--
       Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -56,6 +56,18 @@
                         <a class="nav-link" href="index.php">
                             <i class="material-icons">exit_to_app</i>
                             <p>МОИ ПОСТАВКИ</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="add_city.php">
+                            <i class="material-icons">add_location_alt</i>
+                            <p>ГОРОДА</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="add_user.php">
+                            <i class="material-icons">person_add_alt</i>
+                            <p>ДОБАВИТЬ <br>ПОЛЬЗОВАТЕЛЬ</p>
                         </a>
                     </li>
                     <!-- your sidebar here -->

@@ -31,6 +31,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="assets/css/iHover.css">
     <!--  
     Stylesheets
     =============================================

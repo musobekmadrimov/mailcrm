@@ -32,5 +32,8 @@ if(isset($_POST['newOrderButton'])){
       '.$e->getMessage().'"</div>';
     }
   }
-// ================ REGISTRATION end ================= //
-?>
+// ================ NEW ORDER end ================= //
+// ==============CITY SELECT=========== //
+    $sql2 = $pdo->prepare("SELECT * FROM `city`");
+    $sql2->execute();
+    $cities = $sql2->fetchAll();

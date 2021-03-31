@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 30, 2021 at 10:17 AM
+-- Generation Time: Mar 31, 2021 at 11:26 PM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.8
 
@@ -30,10 +30,18 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `city` (
   `id` int(10) NOT NULL,
-  `region_id` int(10) NOT NULL,
   `name` varchar(255) NOT NULL,
   `zip_code` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `city`
+--
+
+INSERT INTO `city` (`id`, `name`, `zip_code`) VALUES
+(1, 'Urganch', '220100'),
+(2, 'Parij', '321900'),
+(3, 'Yangibozor', '123800');
 
 -- --------------------------------------------------------
 
@@ -77,15 +85,17 @@ CREATE TABLE `orders` (
   `weight` int(255) NOT NULL,
   `quantity` int(10) NOT NULL,
   `total_price` int(10) NOT NULL,
-  `status` varchar(20) NOT NULL
+  `status` varchar(255) NOT NULL DEFAULT 'Принять!',
+  `approximate_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`id`, `order_id`, `sender_name`, `sender_phone`, `recipient_name`, `recipient_phone`, `from`, `to`, `weight`, `quantity`, `total_price`, `status`) VALUES
-(1, 'SDA213123123', 'Musobek Madrimov', '+998999661999', 'Murodbek Saidov', '+998999619980', 'Ташкент', 'Ургенч', 1, 3, 3000000, 'Доставлено!');
+INSERT INTO `orders` (`id`, `order_id`, `sender_name`, `sender_phone`, `recipient_name`, `recipient_phone`, `from`, `to`, `weight`, `quantity`, `total_price`, `status`, `approximate_date`) VALUES
+(10, 'MUAB19997505108', 'Musobek Madrimov', '998999661999', 'Abdullayev Husayn', '998993577505', 'Tashkent', 'Urgench', 2, 2, 40000, 'Доставлено!', '0000-00-00'),
+(11, 'SAMA50201999120', 'Saidov Murodbek', '998904295020', 'Madrimov Musobek', '998999661999', 'Parij', 'Urganch', 3, 2, 60000, 'Принять!', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -137,7 +147,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`) VALUES
-(1, 'admin', '123');
+(1, 'admin', '123'),
+(2, 'superboy_27.04@mail.ru', '123123');
 
 --
 -- Indexes for dumped tables
@@ -187,19 +198,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `city`
 --
 ALTER TABLE `city`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `regions`
@@ -217,7 +228,7 @@ ALTER TABLE `status`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

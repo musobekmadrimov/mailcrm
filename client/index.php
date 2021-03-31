@@ -1,5 +1,6 @@
-<?php include('layouts/main-layout.php');
-include('../app/crudForOrder.php');
+<?php include('../app/crudForOrder.php'); 
+include('layouts/main-layout.php')
+;
 ?>
 <div class="main-panel">
   <!-- Navbar -->
@@ -45,8 +46,8 @@ include('../app/crudForOrder.php');
                       <th width="20%" style="text-align: left; color: #fff">ИМЯ И ТЕЛЕФОН ПОЛУЧАТЕЛЬЯ</th>
                       <th width="10%" style="text-align: center; color: #fff">ОТКУДА</th>
                       <th width="10%" style="text-align: center; color: #fff">КУДА</th>
-                      <th width="10%" style="text-align: center; color: #fff">КОЛИЧЕСТВО</th>
                       <th width="10%" style="text-align: center; color: #fff">СТАТУС</th>
+                      <th width="10%" style="text-align: center; color: #fff">ПРИБЛИЗИТЕЛЬНАЯ ДАТА ДОСТАВКИ</th>
                       <th width="15%" style="text-align: center; color: #fff">ФУНКЦИИ</th>
                     </tr>
                   </thead>
@@ -60,7 +61,7 @@ include('../app/crudForOrder.php');
                         <td><?= @$order['recipient_name'] . "<br>" . @$order['recipient_phone'] ?></td>
                         <td><?= @$order['from'] ?></td>
                         <td><?= @$order['to'] ?></td>
-                        <td><?= @$order['quantity'] ?></td>
+                        <td><?= @$order['status'] ?></td>
                         <td><?= @$order['status'] ?></td>
                         <td>
                           <a href="?edit=<?= $order['id'] ?>" class="btn-success btn-sm" data-toggle="modal" data-target="#editModal<?= $order['id'] ?>"><i class="fa fa-edit"></i></a>
@@ -71,7 +72,11 @@ include('../app/crudForOrder.php');
                     <?php } ?>
                   </tbody>
                 </table>
+
               </div>
+            </div>
+            <div class="card-footer">
+              <?= @$answer ?>
             </div>
           </div>
         </div>
