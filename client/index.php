@@ -62,7 +62,7 @@ include('layouts/main-layout.php')
                         <td><?= @$order['from'] ?></td>
                         <td><?= @$order['to'] ?></td>
                         <td><?= @$order['status'] ?></td>
-                        <td><?= @$order['status'] ?></td>
+                        <td><?= @$order['approximate_date'] ?></td>
                         <td>
                           <a href="?edit=<?= $order['id'] ?>" class="btn-success btn-sm" data-toggle="modal" data-target="#editModal<?= $order['id'] ?>"><i class="fa fa-edit"></i></a>
                           <a href="?delete=<?= $order['id'] ?>" class="btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal<?= $order['id'] ?>"><i class="fa fa-trash"></i></a>

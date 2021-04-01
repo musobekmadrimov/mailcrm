@@ -27,7 +27,8 @@ include('layouts/navbar.php');
                                     <th width="15%" style="text-align: center">ОТКУДА</th>
                                     <th width="15%" style="text-align: center">КУДА</th>
                                     <th width="10%" style="text-align: center">КОЛИЧЕСТВО</th>
-                                    <th width="20%" style="text-align: center">СТАТУС</th>
+                                    <th width="10%" style="text-align: center">ПРИБЛИЗИТЕЛЬНАЯ ДАТА ДОСТАВКИ</th>
+                                    <th width="10%" style="text-align: center">СТАТУС</th>
                                 </tr>
                                 <tr>
                                     <td style="text-align: center"><?= @$result[0]['sender_name'] . "<br>" . @$result[0]['sender_phone'] ?></td>
@@ -35,6 +36,7 @@ include('layouts/navbar.php');
                                     <td style="text-align: center"><?= @$result[0]['from'] ?></td>
                                     <td style="text-align: center"><?= @$result[0]['to'] ?></td>
                                     <td style="text-align: center"><?= @$result[0]['quantity'] ?></td>
+                                    <td style="text-align: center"><?= @$result[0]['approximate_date'] ?></td>
                                     <td style="text-align: center"><?= @$result[0]['status'] ?></td>
                                 </tr>
                             </tbody>

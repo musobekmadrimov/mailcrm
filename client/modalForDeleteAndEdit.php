@@ -46,6 +46,10 @@
                         <!-- <input class="form-control text-dark" type="text" name="edit_to" required autocomplete="off" value="<?= $order['to'] ?>"> -->
                     </div>
                     <div class="form-group">
+                        <label>Зип Код</label>
+                        <input class="form-control text-dark" type="number" name="" id="" required autocomplete="off" value="<?= $order['approximate_date'] ?>">
+                    </div>
+                    <div class="form-group">
                         <label>Масса</label>
                         <input class="form-control text-dark" type="number" name="edit_weight" id="weight" required autocomplete="off" oninput="calculateTotalSum()" value="<?= $order['weight'] ?>">
                     </div>
@@ -56,6 +60,10 @@
                     <div class="form-group">
                         <label>Стоимость</label>
                         <input class="form-control text-dark" type="number" name="edit_total_price" id="total_price" required autocomplete="off" readonly value="<?= $order['total_price'] ?>">
+                    </div>
+                    <div class="form-group">
+                        <label>ПРИБЛИЗИТЕЛЬНАЯ ДАТА ДОСТАВКИ</label>
+                        <input class="form-control text-dark" type="date" name="edit_date" id="date" required autocomplete="off" value="<?= $order['approximate_date'] ?>">
                     </div>
                     <div class="form-group">
                         <label>Статус</label>
@@ -73,7 +81,7 @@
                         }
                     </script>
                     <div class="modal-footer">
-                        <button type="submit" name="edit-submit" class="btn btn-primary">O'zgartirish</button>
+                        <button type="submit" name="edit-submit" class="btn btn-primary">ИЗМЕНИТЬ</button>
                     </div>
 
                 </form>

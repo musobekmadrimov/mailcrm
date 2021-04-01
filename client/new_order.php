@@ -1,5 +1,7 @@
 <?php include('layouts/main-layout.php');
-include('../app/newOrder.php')
+include('../app/newOrder.php');
+include('../app/crudForOrder.php');
+
 ?>
 
 <head>
@@ -44,6 +46,10 @@ include('../app/newOrder.php')
             </select>
         </div>
         <div class="user-box">
+            <input type="number" name="zipcode" id="zipcode" required autocomplete="off">
+            <label>Зип Код</label>
+        </div>
+        <div class="user-box">
             <input type="number" name="weight" id="weight" required autocomplete="off" oninput="calculateTotalSum()">
             <label>Масса</label>
         </div>
@@ -55,6 +61,12 @@ include('../app/newOrder.php')
             <input type="number" name="total_price" id="total_price" required autocomplete="off" readonly>
             <label>Стоимость</label>
         </div>
+        <div class="user-box">
+            <input type="date" name="date" id="date" required autocomplete="off">
+            <label>ПРИБЛИЗИТЕЛЬНАЯ ДАТА ДОСТАВКИ</label>
+        </div>
+        
+
 
         <button type="submit" name="newOrderButton" id="newOrderButton">
             <span></span>

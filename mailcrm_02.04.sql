@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 31, 2021 at 11:26 PM
+-- Generation Time: Apr 01, 2021 at 07:49 PM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.8
 
@@ -41,7 +41,8 @@ CREATE TABLE `city` (
 INSERT INTO `city` (`id`, `name`, `zip_code`) VALUES
 (1, 'Urganch', '220100'),
 (2, 'Parij', '321900'),
-(3, 'Yangibozor', '123800');
+(3, 'Yangibozor', '123800'),
+(4, 'London', '299100');
 
 -- --------------------------------------------------------
 
@@ -94,8 +95,9 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `order_id`, `sender_name`, `sender_phone`, `recipient_name`, `recipient_phone`, `from`, `to`, `weight`, `quantity`, `total_price`, `status`, `approximate_date`) VALUES
-(10, 'MUAB19997505108', 'Musobek Madrimov', '998999661999', 'Abdullayev Husayn', '998993577505', 'Tashkent', 'Urgench', 2, 2, 40000, 'Доставлено!', '0000-00-00'),
-(11, 'SAMA50201999120', 'Saidov Murodbek', '998904295020', 'Madrimov Musobek', '998999661999', 'Parij', 'Urganch', 3, 2, 60000, 'Принять!', '0000-00-00');
+(10, 'MUAB19997505108', 'Musobek Madrimov', '998999661999', 'Abdullayev Husayn', '998993577505', 'Urganch', 'Urganch', 2, 2, 40000, 'Загружен на транспорт!', '2021-04-09'),
+(11, 'SAMA50201999120', 'Saidov Murodbek', '998904295020', 'Madrimov Musobek', '998999661999', 'Parij', 'Urganch', 3, 2, 60000, 'Принять!', '2021-04-21'),
+(12, 'HUSA02059980132', 'Husayn Abdullayev', '998976020205', 'Saidov Murodbek', '998999669980', 'Urganch', 'Parij', 2, 44, 880000, 'Доставлено!', '2021-04-30');
 
 -- --------------------------------------------------------
 
@@ -148,7 +150,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `password`) VALUES
 (1, 'admin', '123'),
-(2, 'superboy_27.04@mail.ru', '123123');
+(2, 'superboy_27.04@mail.ru', '123123'),
+(3, 'murodbeksaidov9999@gmail.com', 'admin123');
 
 --
 -- Indexes for dumped tables
@@ -204,13 +207,13 @@ ALTER TABLE `city`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `regions`
@@ -228,7 +231,7 @@ ALTER TABLE `status`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
