@@ -14,16 +14,15 @@ if(isset($_POST['newOrderButton'])){
     $weight = $_POST['weight'];
     $quantity = $_POST['quantity'];
     $totalPrice = $_POST['total_price'];
-    $date = $_POST['date'];
     $sql2 = $pdo->prepare("SELECT * FROM `orders`");
     $sql2->execute();
     $result = $sql2->fetchAll();
     @$lastId = @($result[count($result)-1]['id'] * 12);
     $orderId = strtoupper(substr($senderName, 0, 2) . substr($recipientName, 0, 2) . substr($senderPhone, -4) . substr($recipientPhone, -4) . $lastId);
     
-    $sql = "INSERT INTO `orders`(`order_id`, `sender_name`, `sender_phone`, `recipient_name`, `recipient_phone`, `from`, `to`, `weight`, `quantity`, `total_price`, `approximate_date`) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO `orders`(`order_id`, `sender_name`, `sender_phone`, `recipient_name`, `recipient_phone`, `from`, `to`, `weight`, `quantity`, `total_price`) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([$orderId, $senderName, $senderPhone, $recipientName, $recipientPhone, $from, $to, $weight, $quantity, $totalPrice, $date]);
+    $stmt->execute([$orderId, $senderName, $senderPhone, $recipientName, $recipientPhone, $from, $to, $weight, $quantity, $totalPrice]);
     $answer = '<div class="alert alert-success" role="alert">
     <button class="close" type="button" data-dismiss="alert" aria-hidden="true">&times;</button><i class="fa fa-cog fa-spin text-white mr-1"></i><strong>Muvafaqqiyatli!</strong> Buyurtma qabul qilindi!
   </div>';

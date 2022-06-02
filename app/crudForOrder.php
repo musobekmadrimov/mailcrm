@@ -21,12 +21,11 @@ if (isset($_POST['edit-submit'])) {
         $weight = $_POST['edit_weight'];
         $quantity = $_POST['edit_quantity'];
         $totalPrice = $_POST['edit_total_price'];
-        $date = $_POST['edit_date'];
         $editStatus = $_POST['edit_status'];
 
-        $sql = "UPDATE `orders` SET `sender_name`=?, `sender_phone`=?, `recipient_name`=?, `recipient_phone`=?, `from`=?, `to`=?, `weight`=?, `quantity`=?, `total_price`=?, `approximate_date`=?, `status`=? WHERE id=$get_id";
+        $sql = "UPDATE `orders` SET `sender_name`=?, `sender_phone`=?, `recipient_name`=?, `recipient_phone`=?, `from`=?, `to`=?, `weight`=?, `quantity`=?, `total_price`=?, `status`=? WHERE id=$get_id";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute([$senderName, $senderPhone, $recipientName, $recipientPhone, $from, $to, $weight, $quantity, $totalPrice, $date, $editStatus]);
+        $stmt->execute([$senderName, $senderPhone, $recipientName, $recipientPhone, $from, $to, $weight, $quantity, $totalPrice, $editStatus]);
         $answer = '<div class="alert alert-success" role="alert">
     <button class="close" type="button" data-dismiss="alert" aria-hidden="true">&times;</button><i class="fa fa-cog fa-spin text-white mr-1"></i><strong>Buyurtma muvafaqqiyatli o\'zgartirildi!</strong>
   </div>';

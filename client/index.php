@@ -44,7 +44,7 @@ include('layouts/main-layout.php')
                       <th width="5%" style="text-align: left; color: #fff">№</th>
                       <th width="20%" style="text-align: left; color: #fff">ИМЯ И ТЕЛЕФОН ОТПРАВИТЕЛЬЯ</th>
                       <th width="20%" style="text-align: left; color: #fff">ИМЯ И ТЕЛЕФОН ПОЛУЧАТЕЛЬЯ</th>
-                      <th width="10%" style="text-align: center; color: #fff">ОТКУДА</th>
+                      <th width="10%" style="text-align: center; color: #fff">КОД ЗАКАЗА</th>
                       <th width="10%" style="text-align: center; color: #fff">КУДА</th>
                       <th width="10%" style="text-align: center; color: #fff">СТАТУС</th>
                       <th width="10%" style="text-align: center; color: #fff">ПРИБЛИЗИТЕЛЬНАЯ ДАТА ДОСТАВКИ</th>
@@ -59,7 +59,7 @@ include('layouts/main-layout.php')
                         <td><?= ++$i ?></td>
                         <td><?= @$order['sender_name'] . "<br>" . @$order['sender_phone'] ?></td>
                         <td><?= @$order['recipient_name'] . "<br>" . @$order['recipient_phone'] ?></td>
-                        <td><?= @$order['from'] ?></td>
+                        <td><?= @$order['order_id'] ?></td>
                         <td><?= @$order['to'] ?></td>
                         <td><?= @$order['status'] ?></td>
                         <td><?= @$order['approximate_date'] ?></td>

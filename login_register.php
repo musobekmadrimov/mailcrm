@@ -48,18 +48,18 @@
               </form>
             </div>
             <div class="col-sm-5 ml-5">
-                <!-- colored -->
-                <div class="ih-item circle colored effect10 bottom_to_top" style="position: absolute;
+              <!-- colored -->
+              <div class="ih-item circle colored effect10 bottom_to_top" style="position: absolute;
     right: 70px;"><a href="https://github.com/musobekmadrimov">
-                <div class="img w-100" style="position: absolute; top: -20%;"><img src="assets/images/favicons/ms-icon-310x310.png" alt="img" class="w-100"></div>
+                  <div class="img w-100" style="position: absolute; top: -20%;"><img src="assets/images/favicons/ms-icon-310x310.png" alt="img" class="w-100"></div>
 
-                    <div class="info" style="position: absolute; top: -20%;">
+                  <div class="info" style="position: absolute; top: -20%;">
                     <h3>TITAN</h3>
-                      <p class="text-white">СRM СИСТЕМА</p>
-                      <p>автор: Musobek Madrimov</p>
-                    </div>
-                  </a></div>
-                <!-- end colored -->
+                    <p class="text-white">СRM СИСТЕМА</p>
+                    <p>автор: Musobek Madrimov</p>
+                  </div>
+                </a></div>
+              <!-- end colored -->
             </div>
           </div>
         </div>
